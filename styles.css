@@ -19,8 +19,14 @@ body {
 header {
     background-color: #2f5597;
     color: #fff;
-    padding: 16px;
+    padding: 1em;
     text-align: center;
+}
+
+.job-title {
+    font-size: 1.25em;
+    font-weight: 300;
+    margin: 1em;
 }
 
 main {
@@ -34,13 +40,13 @@ footer {
     background-color: #2f5597;
     color: #fff;
     text-align: center;
-    padding: 10px 0;
-    width: 100%;
+    padding: 2em 0;
 }
 
 h1 {
     margin: 0.5em;
     font-size: 2.5em;
+    font-weight: 100;
 }
 
 h2 {
@@ -120,21 +126,6 @@ a:hover {
     text-decoration: underline;
 }
 
-.social-links {
-    margin-top: 20px;
-}
-
-.social-links a {
-    display: inline-block;
-    margin-right: 10px;
-    color: #2f5597;
-    text-decoration: none;
-}
-
-.social-links a:hover {
-    text-decoration: underline;
-}
-
 .container {
     flex: 1;
     display: flex;
@@ -145,26 +136,31 @@ a:hover {
     top: 0;
     left: 0;
     background-color: #2f5597;
-    padding: calc(100px + 16px + 20px) 20px 20px 20px;
+    padding: calc(120px + 2em) 2em 2em 2em;
     flex: 0 0 200px;
     height: 100%;
 }
 
-.sidebar ul {
-    padding: 0;
-    margin: 0;
-    list-style: none;
-}
-
 .sidebar ul li {
-    margin-bottom: 10px;
+    margin-bottom: 1em;
 }
 
 .sidebar ul li a {
     color: #fff;
-    text-decoration: none;
 }
 
-.sidebar ul li a:hover {
-    text-decoration: underline;
+.columns {
+    display: flex;
+}
+
+.columns > * {
+    flex: 1;
+}
+
+.social {
+    font-weight: 500;
+}
+
+i.fab {
+    margin-right: 0.5em;
 }
