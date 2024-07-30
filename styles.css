@@ -1,30 +1,37 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
 
-body {
+html {
+    font-size: 16px;
     font-family: 'Roboto', sans-serif;
+}
+
+body {
     margin: 0;
     padding: 0;
     background-color: #f5f5f5;
+    color: #222;
     display: flex;
     flex-direction: column;
-    min-height: 100vh; /* Ensure the body takes up the full height of the viewport */
+    min-height: 100vh;
+    text-align: justify;
 }
 
 header {
-    background-color: #1976d2;
+    background-color: #2f5597;
     color: #fff;
     padding: 16px;
-    text-align: center; /* Center header content */
+    text-align: center;
 }
 
 main {
-    max-width: 800px; /* Set max-width for main content */
-    margin: 0 auto; /* Center main content horizontally */
+    max-width: 800px;
+    margin: 0 auto;
     padding: 20px;
+    line-height: 1.5em;
 }
 
 footer {
-    background-color: #1976d2;
+    background-color: #2f5597;
     color: #fff;
     text-align: center;
     padding: 10px 0;
@@ -32,38 +39,80 @@ footer {
 }
 
 h1 {
-    margin-top: 0;
-    font-size: 36px;
+    margin: 0.5em;
+    font-size: 2.5em;
 }
 
 h2 {
-    color: #333;
     margin-top: 0;
-    margin-bottom: 16px;
+    margin-bottom: 1em;
+    font-size: 1.5em;
+    color: #ed7d31;
 }
 
 h3 {
-    color: #1976d2;
+    color: #2f5597;
     margin-top: 0;
-    margin-bottom: 16px;
+    margin-bottom: 0.5em;
+    font-size: 1.25em;
+    font-weight: 500;
+}
+
+h4 {
+    margin-top: 0;
+    margin-bottom: 0.5em;
+    color: #808080;
+    line-height: 1.6;
+    font-size: 1.1em;
+    font-weight: 400;
 }
 
 ul {
     padding: 0;
     margin: 0;
-    list-style: none; /* Remove default list styles */
+    list-style: none;
+}
+
+ul ul {
+    list-style: disc;
+    margin: 0 1.5em 1.5em 1.5em;
+}
+
+li.current {
+    position: relative;
+}
+
+li.current::before {
+    content: '';
+    width: 1em;
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    background: #ed7d31;
+    transform: translateX(-3em);
+}
+
+p {
+    font-weight: 500;
+    margin: 0.5em 0;
+}
+
+strong {
+    font-weight: bold;
+    margin-right: 5px;
 }
 
 section {
     background-color: #fff;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    padding: 20px;
+    padding: 3em;
     margin-bottom: 20px;
 }
 
 a {
-    color: #1976d2;
+    color: #2f5597;
     text-decoration: none;
 }
 
@@ -78,7 +127,7 @@ a:hover {
 .social-links a {
     display: inline-block;
     margin-right: 10px;
-    color: #1976d2;
+    color: #2f5597;
     text-decoration: none;
 }
 
@@ -87,18 +136,18 @@ a:hover {
 }
 
 .container {
-    flex: 1; /* Allow the main content to grow to fill available space */
+    flex: 1;
     display: flex;
 }
 
 .sidebar {
     position: fixed;
-    top: 0; /* Adjust according to your header height and margin */
+    top: 0;
     left: 0;
-    background-color: #1976d2;
+    background-color: #2f5597;
     padding: calc(100px + 16px + 20px) 20px 20px 20px;
-    flex: 0 0 200px; /* Fixed width for sidebar */
-    height: 100%; /* Set height to 100% to cover full height of the page */
+    flex: 0 0 200px;
+    height: 100%;
 }
 
 .sidebar ul {
@@ -118,186 +167,4 @@ a:hover {
 
 .sidebar ul li a:hover {
     text-decoration: underline;
-}
-
-/* Language section styles */
-#languages {
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    margin-bottom: 20px;
-}
-
-#languages h2 {
-    color: #1976d2;
-    margin-top: 0;
-    margin-bottom: 16px;
-}
-
-#languages ul {
-    padding: 0;
-    margin: 0;
-    list-style: none;
-}
-
-#languages li {
-    margin-bottom: 10px;
-}
-
-#languages li strong {
-    font-weight: bold;
-    margin-right: 5px;
-}
-
-#languages li {
-    color: #616161;
-}
-
-/* Additional styling */
-#languages li::before {
-    content: "\2022"; /* Bullet point */
-    color: #1976d2;
-    font-weight: bold;
-    display: inline-block;
-    width: 1em;
-    margin-left: -1em;
-}
-
-#languages li {
-    padding-left: 1em; /* Adjust space between bullet point and text */
-}
-
-/* Skills section styles */
-#skills {
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    margin-bottom: 20px;
-}
-
-#skills h2 {
-    color: #1976d2;
-    margin-top: 0;
-    margin-bottom: 16px;
-}
-
-#skills ul {
-    padding: 0;
-    margin: 0;
-    list-style: none;
-}
-
-#skills li {
-    margin-bottom: 10px;
-}
-
-#skills li strong {
-    font-weight: bold;
-    margin-right: 5px;
-}
-
-#skills li {
-    color: #616161;
-}
-
-/* Additional styling */
-#skills li::before {
-    content: "\2022"; /* Bullet point */
-    color: #1976d2;
-    font-weight: bold;
-    display: inline-block;
-    width: 1em;
-    margin-left: -1em;
-}
-
-#skills li {
-    padding-left: 1em; /* Adjust space between bullet point and text */
-}
-
-#projects {
-    padding: 20px; /* Add padding for spacing */
-}
-
-#projects h2 {
-    font-size: 24px; /* Increase font size for project titles */
-    margin-bottom: 20px; /* Add margin below project titles */
-}
-
-#projects ul {
-    list-style-type: none; /* Remove default list styles */
-    padding: 0;
-}
-
-#projects li {
-    margin-bottom: 15px; /* Add margin between projects */
-}
-
-#projects li a {
-    color: #1976d2; /* Set color for project links */
-    text-decoration: none; /* Remove underline from project links */
-    transition: color 0.3s ease; /* Add smooth color transition */
-}
-
-#projects li a:hover {
-    color: #135ba1; /* Change color on hover */
-}
-
-#experience {
-    padding: 20px; /* Add padding for spacing */
-}
-
-#experience h2 {
-    font-size: 24px; /* Increase font size for section title */
-    margin-bottom: 20px; /* Add margin below section title */
-}
-
-#experience ul {
-    list-style-type: none; /* Remove default list styles */
-    padding: 0;
-}
-
-#experience li {
-    margin-bottom: 15px; /* Add margin between experience items */
-}
-
-#experience li h3 {
-    font-size: 20px; /* Increase font size for job titles */
-    color: #1976d2; /* Set color for job titles */
-    margin-bottom: 5px; /* Add margin below job titles */
-}
-
-#experience li p {
-    color: #555; /* Set color for job descriptions */
-    line-height: 1.6; /* Increase line height for better readability */
-}
-
-#education {
-    padding: 20px; /* Add padding for spacing */
-}
-
-#education h2 {
-    font-size: 24px; /* Increase font size for section title */
-    margin-bottom: 20px; /* Add margin below section title */
-}
-
-#education ul {
-    list-style-type: none; /* Remove default list styles */
-    padding: 0;
-}
-
-#education li {
-    margin-bottom: 15px; /* Add margin between education items */
-}
-
-#education li h3 {
-    font-size: 20px; /* Increase font size for degree titles */
-    color: #1976d2; /* Set color for degree titles */
-    margin-bottom: 5px; /* Add margin below degree titles */
-}
-
-#education li p {
-    color: #555; /* Set color for education details */
-    line-height: 1.6; /* Increase line height for better readability */
 }
