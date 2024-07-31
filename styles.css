@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
 
 html {
-    font-size: 16px;
     font-family: 'Roboto', sans-serif;
     scroll-padding-top: calc(120px + 3em);
 }
@@ -35,8 +34,6 @@ header {
 }
 
 main {
-    max-width: 800px;
-    margin: 0 auto;
     padding: 1em;
     line-height: 1.5em;
 }
@@ -185,4 +182,42 @@ i.fab {
     float: right;
     border-radius: 50%;
     margin-left: 2em;
+}
+
+@media only screen and (max-width: 800px) {
+    h1 {
+        font-size: 2em;
+    }
+
+    .sidebar {
+        display: none;
+    }
+
+    section {
+        padding: 2em;
+        margin-bottom: 1em;
+    }
+
+    li.current::before {
+        transform: translateX(-2em);
+    }
+}
+
+@media only screen and (min-width: 800px) and (max-width: 1400px) {
+    main {
+        padding-left: 300px;
+        max-width: 800px;
+        margin: 0 auto;
+    }
+
+    footer {
+        padding-left: 300px;
+    }
+}
+
+@media only screen and (min-width: 1400px) {
+    main {
+        max-width: 800px;
+        margin: 0 auto;
+    }
 }
